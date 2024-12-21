@@ -29,7 +29,7 @@ app.use(express.json())
        }
  }))
 app.use(cors({
-    origin:['http://localhost:5173', 'https://mercadofake.netlify.app/'],
+    origin:['http://localhost:5173', 'https://mercadofake.netlify.app'],
     credentials: true,
     methods:['GET', 'PUT', 'POST', 'DELETE'],
     allowedHeaders:['Content-Type', 'Authorization'],
