@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const link_URL_ecommerce = "mongodb://localhost:27017/ecommerce"
+const link_URL_ecommerce = "mongodb+srv://angelmaduro979:G9Zf5NBo47YUewT8@cluster0.euj5a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 const connectionDB = mongoose.connect(link_URL_ecommerce, {})
   .then( () => {console.log('Conectado a la base de datos')})

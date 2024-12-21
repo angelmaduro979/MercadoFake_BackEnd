@@ -9,6 +9,8 @@ import environment from "./config/environment.js";
 import cors from "cors";
 
 
+connectionDB
+
 const app= express();
 const PORT=3000
 
