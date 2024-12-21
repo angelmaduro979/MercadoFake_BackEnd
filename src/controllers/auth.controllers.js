@@ -239,6 +239,7 @@ authControllers.loginPost = async (req, res) => {
 
         campos_permitidos.password.valor=validator.escape(validator.trim(campos_permitidos.password.valor))
         const buscarUser = await User.findOne(email ? { email: campos_permitidos.email_o_phone.valor } : { phone: campos_permitidos.email_o_phone.valor })
+        console.log(buscarUser)
         if (!buscarUser) {
 
             let errorMessage = email ? `¡El correo electrónico: ${email} no se encontró en la base de datos! Por favor, inténtalo de nuevo.` : `¡El teléfono: ${phone} no se encontró en la base de datos! Por favor, inténtalo de nuevo.`
