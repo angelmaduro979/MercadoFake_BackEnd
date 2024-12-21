@@ -230,12 +230,12 @@ authControllers.loginPost = async (req, res) => {
             }
         }
 
-        //buscar al usuario que coincida con los datos conseguidos
-        //Si hay un email busca por email.
+        
 
         campos_permitidos.email_o_phone.valor=email
         ?validator.escape(validator.normalizeEmail(validator.trim(campos_permitidos.email_o_phone.valor)))//email
         :validator.escape(validator.trim(campos_permitidos.email_o_phone.valor))//Phone
+        console.log("Email que se buscará:", validator.escape(validator.normalizeEmail(validator.trim(campos_permitidos.email_o_phone.valor))));
 
         campos_permitidos.password.valor=validator.escape(validator.trim(campos_permitidos.password.valor))
         const buscarUser = await User.findOne(email ? { email: campos_permitidos.email_o_phone.valor } : { phone: campos_permitidos.email_o_phone.valor })
