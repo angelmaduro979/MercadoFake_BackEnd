@@ -168,7 +168,7 @@ authControllers.verifyEmail = async (req, res) => {
         find_User.verificationToken = url_token
         await find_User.save()
 
-        res.status(200).redirect('http://localhost:5173/login')
+        res.status(200).redirect('https://melifakecommerce.netlify.app/login')
 
     } catch (error) {
         console.error(error)
