@@ -396,7 +396,7 @@ authControllers.passwordRecoveryPost = async (req, res) => {
             email:validatedEmail,
         }
         const token = jwt.sign(payloadToken, environment.key, { expiresIn: '1d' })
-        const linkToken = `http://localhost:5173/Newpassword/${token}`
+        const linkToken = `https://melifakecommerce.netlify.app/Newpassword/${token}`
         try {
             await emailSender(email, '¡Restablece tu contraseña en MercadoLibre!', 'usuario', linkToken, './src/helpers/email_sender_helpers/forgotPasswordTemplate.html', './src/assets/images/imagenEmailPassword.png')
         } catch (error) {
