@@ -127,7 +127,7 @@ authControllers.registerPost = async (req, res) => {
                 expiresIn: '1d'
             }
         )
-        const linkVerify = `http://localhost:3000/api/authUser/verifyEmail/${verificationToken}`;
+        const linkVerify = `https://melifakecommerce.netlify.app/api/authUser/verifyEmail/${verificationToken}`;
 
 
         //Mandamos el email de verificacion ➔ configuraramos el email transponder ➔ emailSender.helpers.js ➔ config .env ➔ environment 
